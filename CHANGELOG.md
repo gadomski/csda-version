@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/gadomski/csda-version/compare/v0.1.1...v0.1.2) (2026-01-20)
+
+
+### Bug Fixes
+
+* use setup-python instead of uv for composite action ([2ed4f43](https://github.com/gadomski/csda-version/commit/2ed4f43fad51b31e4f2bd9bde672a3fa81511ad1))
+
 ## [0.1.1](https://github.com/gadomski/csda-version/compare/v0.1.0...v0.1.1) (2026-01-20)
 
 
