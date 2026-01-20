@@ -1,0 +1,17 @@
+[project]
+name = "csda-version"
+version = "0.1.0"
+description = "Calculate the next csda-version"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.14.13",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

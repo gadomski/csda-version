@@ -1,0 +1,29 @@
+name: CSDA Version
+description: Calculate the next CSDA version for this repository
+branding:
+  icon: radio
+  color: blue
+
+outputs:
+  version:
+    description: The next CSDA version
+    value: ${{ steps.calculate.outputs.version }}
+
+runs:
+  using: composite
+  steps:
+    - name: Fetch tags
+      run: git fetch --tags
+    - name: Get last tag
+      id: last-tag
+      run: |
+        LAST_TAG=$(git tag --list 'v*.*.*' --sort=-version:refname | head -n 1)
+        echo "tag=$LAST_TAG" >> "$GITHUB_OUTPUT"
+    - name: Fetch csda-version.txt
+      id: csda-version
+      run: |
+        CSDA_VERSION=$(curl -s https://raw.githubusercontent.com/gadomski/csda-version/refs/heads/main/csda-version.txt | tr -d '[:space:]')
+        echo "version=$CSDA_VERSION" >> "$GITHUB_OUTPUT"
+    - uses: astral-sh/setup-uv@v7
+    - id: calculate
+      run: python ${{ github.action_path }}/src/csda_version/main.py "${{ steps.csda-version.outputs.version }}" "${{ steps.last-tag.outputs.tag }}"
