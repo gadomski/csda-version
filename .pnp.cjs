@@ -29,7 +29,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@actions/core", "npm:1.11.1"],\
-          ["@actions/github", "npm:6.0.1"],\
           ["@octokit/request-error", "npm:6.1.8"],\
           ["@types/node", "npm:25.0.9"],\
           ["csda-release-please", "workspace:."],\
@@ -57,22 +56,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@actions/exec", "npm:1.1.1"],\
           ["@actions/io", "npm:1.1.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@actions/github", [\
-      ["npm:6.0.1", {\
-        "packageLocation": "../../../.yarn/berry/cache/@actions-github-npm-6.0.1-8c12ecff51-10c0.zip/node_modules/@actions/github/",\
-        "packageDependencies": [\
-          ["@actions/github", "npm:6.0.1"],\
-          ["@actions/http-client", "npm:2.2.3"],\
-          ["@octokit/core", "npm:5.2.2"],\
-          ["@octokit/plugin-paginate-rest", "virtual:8c12ecff5197746de5d84652e270da125c79cad2bdaa5a98d0dec549e94265661ee8ee72e2db58261ebc9dfda009968b75f8b48de275cc8a35d9cc488427a90c#npm:9.2.2"],\
-          ["@octokit/plugin-rest-endpoint-methods", "virtual:8c12ecff5197746de5d84652e270da125c79cad2bdaa5a98d0dec549e94265661ee8ee72e2db58261ebc9dfda009968b75f8b48de275cc8a35d9cc488427a90c#npm:10.4.1"],\
-          ["@octokit/request", "npm:8.4.1"],\
-          ["@octokit/request-error", "npm:5.1.1"],\
-          ["undici", "npm:5.29.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -477,13 +460,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@octokit/openapi-types", [\
-      ["npm:20.0.0", {\
-        "packageLocation": "../../../.yarn/berry/cache/@octokit-openapi-types-npm-20.0.0-1aac079689-10c0.zip/node_modules/@octokit/openapi-types/",\
-        "packageDependencies": [\
-          ["@octokit/openapi-types", "npm:20.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:24.2.0", {\
         "packageLocation": "../../../.yarn/berry/cache/@octokit-openapi-types-npm-24.2.0-12708b95fa-10c0.zip/node_modules/@octokit/openapi-types/",\
         "packageDependencies": [\
@@ -506,27 +482,6 @@ const RAW_RUNTIME_STATE =
           ["@octokit/plugin-paginate-rest", "npm:11.4.4-cjs.2"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["npm:9.2.2", {\
-        "packageLocation": "../../../.yarn/berry/cache/@octokit-plugin-paginate-rest-npm-9.2.2-1b0382bc4a-10c0.zip/node_modules/@octokit/plugin-paginate-rest/",\
-        "packageDependencies": [\
-          ["@octokit/plugin-paginate-rest", "npm:9.2.2"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:8c12ecff5197746de5d84652e270da125c79cad2bdaa5a98d0dec549e94265661ee8ee72e2db58261ebc9dfda009968b75f8b48de275cc8a35d9cc488427a90c#npm:9.2.2", {\
-        "packageLocation": "./.yarn/__virtual__/@octokit-plugin-paginate-rest-virtual-8afec34ca6/4/.yarn/berry/cache/@octokit-plugin-paginate-rest-npm-9.2.2-1b0382bc4a-10c0.zip/node_modules/@octokit/plugin-paginate-rest/",\
-        "packageDependencies": [\
-          ["@octokit/core", "npm:5.2.2"],\
-          ["@octokit/plugin-paginate-rest", "virtual:8c12ecff5197746de5d84652e270da125c79cad2bdaa5a98d0dec549e94265661ee8ee72e2db58261ebc9dfda009968b75f8b48de275cc8a35d9cc488427a90c#npm:9.2.2"],\
-          ["@octokit/types", "npm:12.6.0"],\
-          ["@types/octokit__core", null]\
-        ],\
-        "packagePeers": [\
-          "@octokit/core",\
-          "@types/octokit__core"\
-        ],\
-        "linkType": "HARD"\
       }],\
       ["virtual:c7d56a556919f6d4c0ce05ac133766be64a69998f1f45fc673a6887d9d6ac115ac364a75488041278c979c475e9f94a3eea933c59c052e051b86c7a48d24a2f3#npm:11.4.4-cjs.2", {\
         "packageLocation": "./.yarn/__virtual__/@octokit-plugin-paginate-rest-virtual-4057c977e6/4/.yarn/berry/cache/@octokit-plugin-paginate-rest-npm-11.4.4-cjs.2-749142e7e5-10c0.zip/node_modules/@octokit/plugin-paginate-rest/",\
@@ -566,33 +521,12 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@octokit/plugin-rest-endpoint-methods", [\
-      ["npm:10.4.1", {\
-        "packageLocation": "../../../.yarn/berry/cache/@octokit-plugin-rest-endpoint-methods-npm-10.4.1-3fc380dbdf-10c0.zip/node_modules/@octokit/plugin-rest-endpoint-methods/",\
-        "packageDependencies": [\
-          ["@octokit/plugin-rest-endpoint-methods", "npm:10.4.1"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["npm:13.3.2-cjs.1", {\
         "packageLocation": "../../../.yarn/berry/cache/@octokit-plugin-rest-endpoint-methods-npm-13.3.2-cjs.1-0addfb2ebb-10c0.zip/node_modules/@octokit/plugin-rest-endpoint-methods/",\
         "packageDependencies": [\
           ["@octokit/plugin-rest-endpoint-methods", "npm:13.3.2-cjs.1"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["virtual:8c12ecff5197746de5d84652e270da125c79cad2bdaa5a98d0dec549e94265661ee8ee72e2db58261ebc9dfda009968b75f8b48de275cc8a35d9cc488427a90c#npm:10.4.1", {\
-        "packageLocation": "./.yarn/__virtual__/@octokit-plugin-rest-endpoint-methods-virtual-f40c1304cf/4/.yarn/berry/cache/@octokit-plugin-rest-endpoint-methods-npm-10.4.1-3fc380dbdf-10c0.zip/node_modules/@octokit/plugin-rest-endpoint-methods/",\
-        "packageDependencies": [\
-          ["@octokit/core", "npm:5.2.2"],\
-          ["@octokit/plugin-rest-endpoint-methods", "virtual:8c12ecff5197746de5d84652e270da125c79cad2bdaa5a98d0dec549e94265661ee8ee72e2db58261ebc9dfda009968b75f8b48de275cc8a35d9cc488427a90c#npm:10.4.1"],\
-          ["@octokit/types", "npm:12.6.0"],\
-          ["@types/octokit__core", null]\
-        ],\
-        "packagePeers": [\
-          "@octokit/core",\
-          "@types/octokit__core"\
-        ],\
-        "linkType": "HARD"\
       }],\
       ["virtual:c7d56a556919f6d4c0ce05ac133766be64a69998f1f45fc673a6887d9d6ac115ac364a75488041278c979c475e9f94a3eea933c59c052e051b86c7a48d24a2f3#npm:13.3.2-cjs.1", {\
         "packageLocation": "./.yarn/__virtual__/@octokit-plugin-rest-endpoint-methods-virtual-e943259a08/4/.yarn/berry/cache/@octokit-plugin-rest-endpoint-methods-npm-13.3.2-cjs.1-0addfb2ebb-10c0.zip/node_modules/@octokit/plugin-rest-endpoint-methods/",\
@@ -656,14 +590,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@octokit/types", [\
-      ["npm:12.6.0", {\
-        "packageLocation": "../../../.yarn/berry/cache/@octokit-types-npm-12.6.0-3f6eea3eb3-10c0.zip/node_modules/@octokit/types/",\
-        "packageDependencies": [\
-          ["@octokit/openapi-types", "npm:20.0.0"],\
-          ["@octokit/types", "npm:12.6.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:13.10.0", {\
         "packageLocation": "../../../.yarn/berry/cache/@octokit-types-npm-13.10.0-aadb051232-10c0.zip/node_modules/@octokit/types/",\
         "packageDependencies": [\
@@ -1017,7 +943,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@actions/core", "npm:1.11.1"],\
-          ["@actions/github", "npm:6.0.1"],\
           ["@octokit/request-error", "npm:6.1.8"],\
           ["@types/node", "npm:25.0.9"],\
           ["csda-release-please", "workspace:."],\
