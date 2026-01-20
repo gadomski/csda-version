@@ -1,6 +1,6 @@
 [project]
 name = "csda-version"
-version = "0.2.0"
+version = "0.2.1"
 description = "Calculate the next csda-version"
 readme = "README.md"
 requires-python = ">=3.13"

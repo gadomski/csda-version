@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/gadomski/csda-version/compare/v0.2.0...v0.2.1) (2026-01-20)
+
+
+### Bug Fixes
+
+* don't install in the action ([3a5724e](https://github.com/gadomski/csda-version/commit/3a5724eb00f5834e26381a3adb654b2f85b72584))
+
 ## [0.2.0](https://github.com/gadomski/csda-version/compare/v0.1.5...v0.2.0) (2026-01-20)
 
 
