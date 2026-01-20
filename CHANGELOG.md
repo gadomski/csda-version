@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/gadomski/csda-release-please/compare/v1.1.3...v1.1.4) (2026-01-20)
+
+
+### Bug Fixes
+
+* use submodule ([4fb82ef](https://github.com/gadomski/csda-release-please/commit/4fb82ef6b0daa2c4d04039693190b54dd2573013))
+
 ## [1.1.3](https://github.com/gadomski/csda-release-please/compare/v1.1.2...v1.1.3) (2026-01-20)
 
 
