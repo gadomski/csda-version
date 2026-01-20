@@ -1,6 +1,6 @@
 # csda-release-please
 
-TypeScript wrapper for release-please.
+CSDA-specific versioning for **release-please**.
 
 ## Install
 
