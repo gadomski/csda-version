@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/gadomski/csda-version/compare/v0.2.1...v0.2.2) (2026-01-20)
+
+
+### Bug Fixes
+
+* install github action path ([6a0760b](https://github.com/gadomski/csda-version/commit/6a0760b24d94467a90a370377012ed3a2dfdc9dd))
+
 ## [0.2.1](https://github.com/gadomski/csda-version/compare/v0.2.0...v0.2.1) (2026-01-20)
 
 
