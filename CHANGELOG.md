@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/gadomski/csda-release-please/compare/v1.1.0...v1.1.1) (2026-01-20)
+
+
+### Bug Fixes
+
+* action is `cjs` ([7124e2f](https://github.com/gadomski/csda-release-please/commit/7124e2f2d6aedcc42b89c838989ef866cb83d75b))
+
 ## [1.1.0](https://github.com/gadomski/csda-release-please/compare/v1.0.1...v1.1.0) (2026-01-20)
 
 
