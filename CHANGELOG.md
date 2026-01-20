@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.7](https://github.com/gadomski/csda-release-please/compare/v1.1.6...v1.1.7) (2026-01-20)
+
+
+### Bug Fixes
+
+* add versiong-strategy to inputs ([55c2e35](https://github.com/gadomski/csda-release-please/commit/55c2e35b58702a8b3b7e66e5275347157d8a86bc))
+
 ## [1.1.6](https://github.com/gadomski/csda-release-please/compare/v1.1.5...v1.1.6) (2026-01-20)
 
 
