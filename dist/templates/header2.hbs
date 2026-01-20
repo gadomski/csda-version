@@ -1,1 +1,13 @@
-../../release-please-action/dist/header2.hbs
+{{#if isPatch~}}
+  ###
+{{~else~}}
+  ##
+{{~/if}} {{#if @root.linkCompare~}}
+  [{{version}}]({{compareUrlFormat}})
+{{~else}}
+  {{~version}}
+{{~/if}}
+{{~#if title}} "{{title}}"
+{{~/if}}
+{{~#if date}} ({{date}})
+{{/if}}
