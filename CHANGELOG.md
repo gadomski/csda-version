@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/gadomski/csda-release-please/compare/v1.1.1...v1.1.2) (2026-01-20)
+
+
+### Bug Fixes
+
+* add templates ([d1f7a4b](https://github.com/gadomski/csda-release-please/commit/d1f7a4bc3b4c3c5bd1f54440c719d6a9d43c9fbe))
+
 ## [1.1.1](https://github.com/gadomski/csda-release-please/compare/v1.1.0...v1.1.1) (2026-01-20)
 
 
