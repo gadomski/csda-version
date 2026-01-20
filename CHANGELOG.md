@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/gadomski/csda-version/compare/v0.1.5...v0.2.0) (2026-01-20)
+
+
+### Features
+
+* use pydantic and click ([#18](https://github.com/gadomski/csda-version/issues/18)) ([86ecd2d](https://github.com/gadomski/csda-version/commit/86ecd2d25054e323f2ae585ace57f94223c10125))
+
 ## [0.1.5](https://github.com/gadomski/csda-version/compare/v0.1.4...v0.1.5) (2026-01-20)
 
 
