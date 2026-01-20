@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/gadomski/csda-version/compare/v0.2.2...v0.2.3) (2026-01-20)
+
+
+### Bug Fixes
+
+* echo to github output ([15c14df](https://github.com/gadomski/csda-version/commit/15c14df8d18e24a2b2d3bf38c79ee315987d130a))
+
 ## [0.2.2](https://github.com/gadomski/csda-version/compare/v0.2.1...v0.2.2) (2026-01-20)
 
 
