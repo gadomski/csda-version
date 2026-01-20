@@ -7,6 +7,8 @@ def get_next_version(csda_version: str, tag: str) -> str:
     csda_version_parts = csda_version.split(".")
     if tag.startswith("v"):
         tag_parts = tag[1:].split(".")
+        if "-" in tag_parts[2]:
+            tag_parts = tag_parts[0:2] + tag_parts[2].split("-")
     else:
         tag_parts = None
     if (
