@@ -1,0 +1,58 @@
+on:
+  schedule:
+    - cron: "0 0 * * 0" # Every Sunday at midnight UTC
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: check
+        name: Check if bi-weekly run
+        run: |
+          week=$(date +%V)
+          if [ $((week % 2)) -eq 0 ]; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          fi
+
+      - if: steps.check.outputs.should_run == 'true'
+        name: Update version
+        run: |
+          expected_major=$(date +%y)
+          month=$(date +%-m)
+          if [ $month -le 2 ]; then
+            expected_minor=2
+          elif [ $month -le 5 ]; then
+            expected_minor=3
+          elif [ $month -le 8 ]; then
+            expected_minor=4
+          else
+            expected_minor=1
+          fi
+
+          current=$(cat version.txt)
+          IFS='.' read -r major minor patch <<< "$current"
+
+          if [ "$major" -ne "$expected_major" ]; then
+            echo "$expected_major.$expected_minor.0" > version.txt
+            echo "message=chore: bump major version for new year" >> $GITHUB_ENV
+          elif [ "$minor" -ne "$expected_minor" ]; then
+            echo "$major.$expected_minor.0" > version.txt
+            echo "message=chore: bump minor version for new quarter" >> $GITHUB_ENV
+          else
+            new_patch=$((patch + 1))
+            echo "$major.$minor.$new_patch" > version.txt
+            echo "message=chore: bump patch version" >> $GITHUB_ENV
+          fi
+
+      - if: steps.check.outputs.should_run == 'true'
+        name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add version.txt
+          git commit -m "${{ env.message }}"
+          git push
