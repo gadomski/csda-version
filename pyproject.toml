@@ -15,6 +15,9 @@ dev = [
     "ruff>=0.14.13",
 ]
 
+[project.scripts]
+csda-version = "csda_version:cli"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"

@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 import os
-import sys
 from typing import Literal
 
+import click
 from pydantic import BaseModel, Field
 
 
@@ -105,17 +105,42 @@ def get_next_csda_version(date: str, csda_version_str: str) -> str:
     return csda_version.to_str()
 
 
-if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        raise Exception(
-            f"Invalid number of arguments, expected 2, got {len(sys.argv) - 1}"
-        )
-    csda_version = sys.argv[1]
-    tag = sys.argv[2]
+@click.group()
+def cli() -> None:
+    """Calculate CSDA versions."""
+    pass
+
+
+@cli.command("next-version")
+@click.argument("csda_version")
+@click.argument("tag")
+@click.option(
+    "--github-output",
+    is_flag=True,
+    help="Write output to GITHUB_OUTPUT environment variable",
+)
+def next_version_cmd(csda_version: str, tag: str, github_output: bool) -> None:
+    """Calculate the next version based on CSDA_VERSION and TAG."""
     version = get_next_version(csda_version, tag)
-    github_output = os.environ.get("GITHUB_OUTPUT")
     if github_output:
-        with open(github_output, "a") as f:
-            f.write(f"version={version}\n")
+        github_output_path = os.environ.get("GITHUB_OUTPUT")
+        if github_output_path:
+            with open(github_output_path, "a") as f:
+                f.write(f"version={version}\n")
+        else:
+            raise click.ClickException("GITHUB_OUTPUT environment variable not set")
     else:
-        print(version)
+        click.echo(version)
+
+
+@cli.command("next-csda-version")
+@click.argument("date")
+@click.argument("csda_version")
+def next_csda_version_cmd(date: str, csda_version: str) -> None:
+    """Calculate the next CSDA version based on DATE and CSDA_VERSION."""
+    version = get_next_csda_version(date, csda_version)
+    click.echo(version)
+
+
+if __name__ == "__main__":
+    cli()

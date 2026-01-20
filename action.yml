@@ -12,6 +12,12 @@ outputs:
 runs:
   using: composite
   steps:
+    - uses: actions/setup-python@v6
+      with:
+        python-version: "3.13"
+    - name: Install
+      shell: bash
+      run: python -m pip install .
     - name: Fetch tags
       shell: bash
       run: git fetch --tags
@@ -27,9 +33,6 @@ runs:
       run: |
         CSDA_VERSION=$(curl -s https://raw.githubusercontent.com/gadomski/csda-version/refs/heads/main/csda-version.txt | tr -d '[:space:]')
         echo "version=$CSDA_VERSION" >> "$GITHUB_OUTPUT"
-    - uses: actions/setup-python@v6
-      with:
-        python-version: "3.13"
     - id: calculate
       shell: bash
-      run: python ${{ github.action_path }}/src/csda_version/__init__.py "${{ steps.csda-version.outputs.version }}" "${{ steps.last-tag.outputs.tag }}"
+      run: csda-version next-version "${{ steps.csda-version.outputs.version }}" "${{ steps.last-tag.outputs.tag }}"

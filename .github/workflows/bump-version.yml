@@ -21,34 +21,16 @@ jobs:
           fi
 
       - if: steps.check.outputs.should_run == 'true'
+        uses: astral-sh/setup-uv@v5
+
+      - if: steps.check.outputs.should_run == 'true'
+        id: bump
         name: Update version
         run: |
-          expected_major=$(date +%y)
-          month=$(date +%-m)
-          if [ $month -le 3 ]; then
-            expected_minor=2
-          elif [ $month -le 6 ]; then
-            expected_minor=3
-          elif [ $month -le 9 ]; then
-            expected_minor=4
-          else
-            expected_minor=1
-          fi
-
-          current=$(cat version.txt)
-          IFS='.' read -r major minor patch <<< "$current"
-
-          if [ "$major" -ne "$expected_major" ]; then
-            echo "$expected_major.2.0" > version.txt
-            echo "message=chore: bump major version for new year" >> $GITHUB_ENV
-          elif [ "$minor" -ne "$expected_minor" ]; then
-            echo "$major.$expected_minor.0" > version.txt
-            echo "message=chore: bump minor version for new quarter" >> $GITHUB_ENV
-          else
-            new_patch=$((patch + 1))
-            echo "$major.$minor.$new_patch" > version.txt
-            echo "message=chore: bump patch version" >> $GITHUB_ENV
-          fi
+          current=$(cat csda-version.txt)
+          new_version=$(uv run csda-version next-csda-version "$(date +%Y-%m-%d)" "$current")
+          echo "$new_version" > csda-version.txt
+          echo "new_version=$new_version" >> $GITHUB_OUTPUT
 
       - if: steps.check.outputs.should_run == 'true'
         name: Commit and push
@@ -56,5 +38,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add version.txt
-          git commit -m "${{ env.message }}"
+          git commit -m "chore: bump version to ${{ steps.bump.outputs.new_version }}"
           git push
