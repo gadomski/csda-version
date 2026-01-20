@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/gadomski/csda-release-please/compare/v1.1.2...v1.1.3) (2026-01-20)
+
+
+### Bug Fixes
+
+* more tweaks to the action ([2fd1e4b](https://github.com/gadomski/csda-release-please/commit/2fd1e4bd5c83446e65103e6c3c3f8eea3a3c08fe))
+
 ## [1.1.2](https://github.com/gadomski/csda-release-please/compare/v1.1.1...v1.1.2) (2026-01-20)
 
 
