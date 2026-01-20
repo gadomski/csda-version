@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.1.5](https://github.com/gadomski/csda-version/compare/v0.1.4...v0.1.5) (2026-01-20)
+
+
+### Bug Fixes
+
+* version calculation ([#17](https://github.com/gadomski/csda-version/issues/17)) ([e682b21](https://github.com/gadomski/csda-version/commit/e682b217dcfc74ef33ef8a4c30221ccda715df8d))
+
+
+### Documentation
+
+* add note about demo repo ([122662a](https://github.com/gadomski/csda-version/commit/122662a1a1fc450505af4c0bac576b33f827bbc7))
+* add notes about the CSDA version ([193dbca](https://github.com/gadomski/csda-version/commit/193dbca3ee958dfecb845431bb70ed373c0dfce8))
+
 ## [0.1.4](https://github.com/gadomski/csda-version/compare/v0.1.3...v0.1.4) (2026-01-20)
 
 
