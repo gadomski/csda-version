@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/gadomski/csda-release-please/compare/v1.1.5...v1.1.6) (2026-01-20)
+
+
+### Bug Fixes
+
+* no symlinks? ([a4b653d](https://github.com/gadomski/csda-release-please/commit/a4b653d436de778d8da22bf4546536a4e9dfd37a))
+
 ## [1.1.5](https://github.com/gadomski/csda-release-please/compare/v1.1.4...v1.1.5) (2026-01-20)
 
 
