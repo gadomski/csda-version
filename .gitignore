@@ -1,6 +1,7 @@
 node_modules
 dist/*
 !dist/action.cjs
+!dist/templates
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
