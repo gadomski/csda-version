@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/gadomski/csda-version/compare/v0.1.2...v0.1.3) (2026-01-20)
+
+
+### Bug Fixes
+
+* don't try to import ([188b540](https://github.com/gadomski/csda-version/commit/188b54074fc152eab3426225464cf556cb1ac94f))
+
 ## [0.1.2](https://github.com/gadomski/csda-version/compare/v0.1.1...v0.1.2) (2026-01-20)
 
 
