@@ -6,4 +6,6 @@ To use:
 ```yaml
 - name: CSDA Release Please
   uses: gadomski/csda-release-please
+  with:
+    versioning-strategy: csda
 ```
