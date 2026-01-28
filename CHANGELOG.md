@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.4](https://github.com/gadomski/csda-version/compare/v0.2.3...v0.2.4) (2026-01-28)
+
+
+### Bug Fixes
+
+* bump csda version manually ([61ab053](https://github.com/gadomski/csda-version/commit/61ab05374ed0b312450663bf05217c48587ff6e5))
+* version file name in cronjob ([64788e2](https://github.com/gadomski/csda-version/commit/64788e2bac84c0ac0681feee3e87c408f9e75ad0))
+
 ## [0.2.3](https://github.com/gadomski/csda-version/compare/v0.2.2...v0.2.3) (2026-01-20)
 
 
