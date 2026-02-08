@@ -3,6 +3,7 @@ name: Bump version
 on:
   schedule:
     - cron: "0 0 * * 0" # Every Sunday at midnight UTC
+  workflow_dispatch:
 
 jobs:
   bump-version:
