@@ -42,10 +42,17 @@ jobs:
           echo "new_version=$new_version" >> $GITHUB_OUTPUT
 
       - if: steps.check.outputs.should_run == 'true'
-        name: Commit and push
+        name: Create pull request
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
+          branch="bump-version/${{ steps.bump.outputs.new_version }}"
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
           git add csda-version.txt
           git commit -m "chore: bump version to ${{ steps.bump.outputs.new_version }}"
-          git push
+          git push -u origin "$branch"
+          gh pr create \
+            --title "chore: bump version to ${{ steps.bump.outputs.new_version }}" \
+            --body "Automated version bump to ${{ steps.bump.outputs.new_version }}"
