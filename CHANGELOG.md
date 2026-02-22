@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.5](https://github.com/gadomski/csda-version/compare/v0.2.4...v0.2.5) (2026-02-22)
+
+
+### Bug Fixes
+
+* bump version ([#29](https://github.com/gadomski/csda-version/issues/29)) ([fc32aa5](https://github.com/gadomski/csda-version/commit/fc32aa5a24a2952d2268a37e9cbfa7864be26592))
+* bump version via PR, not directly to main ([#27](https://github.com/gadomski/csda-version/issues/27)) ([7df25da](https://github.com/gadomski/csda-version/commit/7df25da99faa64e3da6bbf3b8127e331141f2249))
+* use orca-bro for bump version ([936aca9](https://github.com/gadomski/csda-version/commit/936aca9cf19ef61cb571b1e2534394ed03797518))
+
 ## [0.2.4](https://github.com/gadomski/csda-version/compare/v0.2.3...v0.2.4) (2026-01-28)
 
 
