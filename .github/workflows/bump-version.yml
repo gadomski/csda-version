@@ -22,7 +22,7 @@ jobs:
       - id: check
         name: Check if bi-weekly run
         run: |
-          week=$(date +%V)
+          week=$((10#$(date +%V)))
           if [ $((week % 2)) -eq 0 ]; then
             echo "should_run=true" >> $GITHUB_OUTPUT
           else
